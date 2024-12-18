@@ -1,0 +1,135 @@
+/* Variables */
+$primary-color: #5bc4ea;
+$secondary-color: #4caf50;
+$background-color: #f0f8ff;
+$hover-color: #67cf97;
+$text-color: #333;
+
+/* Mixin for Box Shadows */
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header Styling */
+.app-header {
+  background-color: $primary-color;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 2.5em;
+  @include box-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  border-bottom: 2px solid adjust-color($primary-color, $lightness: -15%);
+  border-radius: 0 0 15px 15px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Dropdown Styling */
+.dropdown-container {
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: adjust-color($secondary-color, $lightness: 30%);
+  @include box-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 20;
+
+  &:hover {
+    background-color: $hover-color;
+    transform: scale(1.03);
+  }
+
+  select {
+    position: relative;
+    z-index: 30;
+  }
+}
+
+/* Map Container */
+.map-container {
+  margin: 3rem auto;
+  padding: 2rem 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  @include box-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 5;
+
+  &:hover {
+    transform: translateY(-5px);
+    @include box-shadow(0 8px 15px rgba(0, 0, 0, 0.2));
+  }
+}
+
+.map-header {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: darken($secondary-color, 10%);
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  font-size: 1em;
+  color: #fff;
+  background-color: $secondary-color;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+    transform: scale(1.05);
+  }
+}
+
+/* List Items */
+ul {
+  list-style: none;
+
+  li {
+    margin: 0.5rem 0;
+    color: $text-color;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: lighten($background-color, 5%);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: darken($background-color, 10%);
+      transform: translateX(5px);
+    }
+  }
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .app-header {
+    font-size: 2em;
+  }
+  .dropdown-container {
+    padding: 0.5rem;
+  }
+}
