@@ -1,0 +1,119 @@
+/* Variables */
+/* Mixin for Box Shadows */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header Styling */
+.app-header {
+  background-color: #5bc4ea;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 2.5em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #1ca9dc;
+  border-radius: 0 0 15px 15px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Dropdown Styling */
+.dropdown-container {
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #b5dfb7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 20;
+}
+.dropdown-container:hover {
+  background-color: #67cf97;
+  transform: scale(1.03);
+}
+.dropdown-container select {
+  position: relative;
+  z-index: 30;
+}
+
+/* Map Container */
+.map-container {
+  margin: 3rem auto;
+  padding: 2rem 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 5;
+}
+.map-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.map-header {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #3d8b40;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  font-size: 1em;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background-color: #3d8b40;
+  transform: scale(1.05);
+}
+
+/* List Items */
+ul {
+  list-style: none;
+}
+ul li {
+  margin: 0.5rem 0;
+  color: #333;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+ul li:hover {
+  background-color: #bde0ff;
+  transform: translateX(5px);
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .app-header {
+    font-size: 2em;
+  }
+  .dropdown-container {
+    padding: 0.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
